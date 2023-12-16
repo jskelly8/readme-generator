@@ -1,14 +1,14 @@
 {
-  "name": "static-site",
+  "name": "readme-generator",
   "version": "1.0.0",
-  "description": "",
+  "description": "Command Line program that generates a filled out, professional README.md file based off of responses given to prompts.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Jess Skelton",
   "license": "ISC",
   "dependencies": {
-    "inquirer": "8.2.4"
+    "inquirer": "^8.2.4"
   }
 }

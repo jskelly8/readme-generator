@@ -1,2 +1,4 @@
 node_modules/
+package-lock.json
+# For Macs, included for consistency:
 .DS_Store/
