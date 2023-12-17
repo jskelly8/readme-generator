@@ -4,7 +4,7 @@ const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown');
 const path = require('path');
 
-// TODO: Create an array of questions for user input
+// Array of questions for user input
 const questions = [
     {
         type: 'input',
@@ -78,10 +78,10 @@ function writeToFile(fileName, data) {
 function init() {
     inquirer.prompt(questions).then((responses) => {
         console.log('Creating file...');
-        const markdownContent = generateMarkdown({...responses});
+        const markdownContent = generateMarkdown({ ...responses });
 
         fs.writeFile('./README.md', markdownContent, (err) =>
-        err ? console.log(err) : console.log('Successfully created README.md!')
+            err ? console.log(err) : console.log('Successfully created README.md!')
         );
     });
 };

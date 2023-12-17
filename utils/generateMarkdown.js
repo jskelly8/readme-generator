@@ -1,5 +1,4 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+// Function that returns a license badge based on which license is passed in. If there is no license, return an empty string
 function renderLicenseBadge(license) {
   if (license === 'MIT') {
     return '![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)';
@@ -14,8 +13,7 @@ function renderLicenseBadge(license) {
   };
 };
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+// Function that returns the license link. If there is no license, return an empty string
 function renderLicenseLink(license) {
   if (license === 'MIT') {
     return '[MIT License](https://opensource.org/licenses/MIT)';
@@ -30,20 +28,19 @@ function renderLicenseLink(license) {
   };
 };
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
+// Function that returns the license section of README. If there is no license, return an empty string
 function renderLicenseSection(license) {
   if (license !== '') {
     return `
     ## License
-    ${renderLicenseBadge(data.license)}
-    ${renderLicenseLink(data.license)}
+    ${renderLicenseBadge(license)}
+    ${renderLicenseLink(license)}
 
     `
   }
-}
+};
 
-// TODO: Create a function to generate markdown for README
+// Function to generate markdown for README
 function generateMarkdown(data) {
   return `
   # ${data.title}
@@ -60,7 +57,7 @@ function generateMarkdown(data) {
   - [License](#license)
   - [Badges](#badges)
   - [Features](#features)
-  - [How to Contribute](#how to Contribute)
+  - [How to Contribute](#how-to-contribute)
   - [Tests](#tests)
   - [Questions?](#questions?)
 
@@ -73,7 +70,7 @@ function generateMarkdown(data) {
   ## Credits
   ${data.credits}
 
-  ${renderLicenseSection(data.license)}
+  ${renderLicenseSection(license)}
 
   ## Badges
   ${data.badges}
@@ -91,6 +88,7 @@ function generateMarkdown(data) {
   If you have any questions, feel free to reach out to me via [GitHub](https://github.com/${data.gitHubUser}/) or email me at ${data.email}.
 
 `;
-}
+};
 
+// Object used to export the generateMarkdown function
 module.exports = generateMarkdown;
