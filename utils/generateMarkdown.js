@@ -3,8 +3,12 @@
 function renderLicenseBadge(license) {
   if (license === 'MIT') {
     return '![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)';
-  } else if (license === '') {
-
+  } else if (license === 'Apache') {
+    return '![License: Apache](https://img.shields.io/badge/License-Apache-blue.svg)';
+  } else if (license === 'BSD') {
+    return '![License: BSD](https://img.shields.io/badge/License-BSD-green.svg)';
+  } else if (license === 'Unlicense') {
+    return '![License: Unlicense](https://img.shields.io/badge/License-Unlicense-lightgrey.svg)';
   } else {
     return '';
   };
@@ -15,8 +19,12 @@ function renderLicenseBadge(license) {
 function renderLicenseLink(license) {
   if (license === 'MIT') {
     return '[MIT License](https://opensource.org/licenses/MIT)';
-  } else if (license === '') {
-
+  } else if (license === 'Apache') {
+    return '[Apache License](https://opensource.org/licenses/Apache-2.0)';
+  } else if (license === 'BSD') {
+    return '[BSD License](https://opensource.org/licenses/BSD-3-Clause)';
+  } else if (license === 'Unlicense') {
+    return '[Unlicense](http://unlicense.org/)';
   } else {
     return '';
   };
@@ -64,6 +72,8 @@ function generateMarkdown(data) {
 
   ## Credits
   ${data.credits}
+
+  ${renderLicenseSection(data.license)}
 
   ## Badges
   ${data.badges}

@@ -35,7 +35,7 @@ const questions = [
         type: 'list',
         name: 'license',
         message: 'Select a license for your project.',
-        choices: ['MIT', '']
+        choices: ['MIT', 'Apache', 'BSD', 'Unlicense']
     },
     {
         type: 'input',
@@ -80,7 +80,9 @@ function init() {
         console.log('Creating file...');
         const markdownContent = generateMarkdown({...responses});
 
-        writeToFile('./README.md', markdownContent);
+        fs.writeFile('./README.md', markdownContent, (err) =>
+        err ? console.log(err) : console.log('Successfully created README.md!')
+        );
     });
 };
 
