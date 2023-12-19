@@ -31,11 +31,7 @@ function renderLicenseLink(license) {
 // Function that returns the license section of README. If there is no license, return an empty string
 function renderLicenseSection(data) {
   if (data.license !== '') {
-    return `## License  
-    ${renderLicenseBadge(data.license)}
-    ${renderLicenseLink(data.license)}
-
-    `
+    return `## License`
   } else {
     return '';
   };
@@ -71,6 +67,7 @@ function generateMarkdown(data) {
   ${data.credits}
 
   ${renderLicenseSection(data.license)}
+  ${renderLicenseLink(data.license)}
 
   ## Badges
   ${data.badges}
