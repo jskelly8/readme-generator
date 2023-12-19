@@ -24,7 +24,9 @@
   - Please also install the dependency inside the code shown in the package.json of Inquirer v8.2.4 (You can just use 'npm i')
 
   ## Usage
-  [![Screenshot of code snippet]({./READMEgeneratorClip.png})]({https://watch.screencastify.com/v/8o6n7tkGkBopLuJ0bCcy} "Walkthrough Video")
+  * Link to walkthrough video: *(click the code snippet)*
+
+  [![Screenshot of code snippet](./READMEgeneratorClip.png)](https://watch.screencastify.com/v/8o6n7tkGkBopLuJ0bCcy "Walkthrough Video")
 
   ## Credits
   README template used from: https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide 
